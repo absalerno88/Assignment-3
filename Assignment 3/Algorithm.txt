@@ -1,0 +1,56 @@
+Q1 - Expression Manager with Stack
+
+    isBalanced(expression)
+    - Initialize empty Stack
+    - For each char
+        - If char is an opening symbol, push it onto the Stack
+        - If char is closing symbol:
+            - If the stack is empty, return false (unbalanced)
+            - Otherwise, pop the top element from the stack
+    - After processing all characters, if the stack is not empty return false
+    - If none of te above conditions fail, return true
+
+    infixToPostfix(expression)
+    - Ensure the expression is balanced using isBalanced. If not, report an invalid expression and exit
+    - Initialize an empty stack for operators and an empty list for the output postfix expression.
+    - Define a precedence map for the operators: +, -, <, *, /, %
+    - For each char in the expression:
+        - If car is an operand, add it to te output list.
+        - If car is an opening parenthesis, push it onto the stack.
+        - If car is a closing parenthesis:
+            - While the stack is not empty and the top of the stack is not an opening parenthesis, pop operators from the stack and add tem to the output list.
+            - Pop the opening parenthesis from the stack.
+        - If char is an operator:
+            - While the stack is not empty and the precedence of the operator at the top of the stack is greater than or equal to the precedence of char, pop operators from the stack and add them to the output list.
+            - Push char onto the stack
+    - After reading the expression, while the stack is not empty, pop the remaining operators, add to the output list
+    - Convert the output list to a string to get the postfix expression
+    - Return the postfix expression
+
+
+Q2 - Queue operations
+
+    enqueue(element)
+    - Create a new node with the given element.
+    - If the queue is empty, set the new node as both the front and rear of the queue.
+    - If the queue is not empty, link the current rear node to the new node, and then set the new node as the rear.
+    - Increment the size counter
+
+    dequeue()
+    - If the queue is empty, return an error or null value.
+    - Store the current front node's value to return it later.
+    - Set the front to the next node in the queue.
+    - If the queue becomes empty after removal, set the rear to null
+    - Decrement the size counter.
+    - Return the stored front node's value.
+
+    front()
+    - If the queue is empty, return an error or null value
+    - REturn the value of the front node.
+
+    isEmpty()
+    -  Return true if the size counter is 0, else return false
+
+    size()
+    - Return the size counter
+

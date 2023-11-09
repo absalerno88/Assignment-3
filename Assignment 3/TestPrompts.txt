@@ -1,0 +1,20 @@
+1. Simple Expression Without Parentheses
+
+    - Expression: 8 + 3 * 4
+    - Expected Output: 8 3 4 * +
+
+2. Expression With All Types of Parentheses
+
+    - Expression: {[8 + (3 * 4)] - 5}
+    - Expected Output: 8 3 4 * + 5 -
+
+3. Expression with Unbalanced Parentheses
+
+    - Expression: (8 + 3) * 4 - 2)
+    - Expected Output: Error message indicating invalid expression due to unbalanced parentheses.
+
+4. Complex Expression with Everything Combined
+
+    - Expression: [(8 + 3) * (4 - 2)] / (2 + (6 % 4))
+    - Expected Output: 8 3 + 4 2 - * 2 6 4 % + /
+
